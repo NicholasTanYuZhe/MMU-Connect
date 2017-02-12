@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2017 at 10:42 AM
+-- Generation Time: Feb 12, 2017 at 02:48 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -56,6 +56,14 @@ CREATE TABLE `event` (
   `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `name`, `calDate`, `calTime`, `venue`, `content`, `description`) VALUES
+(2, 'John Doe', '20170101', '00:00:00', '', '', ''),
+(3, 'John Doe', '20170101', '01:01:00', 'asdasd', 'aaa', 'aaa');
+
 -- --------------------------------------------------------
 
 --
@@ -74,14 +82,6 @@ CREATE TABLE `user` (
   `camid` varchar(100) NOT NULL,
   `campass` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `name`, `password`, `firstname`, `lastname`, `age`, `email`, `city`, `camid`, `campass`) VALUES
-(1, 'Nick', '827ccb0eea8a706c4c34a16891f84e7b', '', '', '21', '', '', '1142701655', 'Nick@859899'),
-(2, 'Kelvinmc', '202cb962ac59075b964b07152d234b70', '', '', '', '', '', '1142700808', '8tvET?NZvF');
 
 --
 -- Indexes for dumped tables
@@ -118,12 +118,12 @@ ALTER TABLE `document`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
